@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pet_Care</string>
+    <string name="welcomeStart1"> <b>¡Bienvenido/a!</b>     Felicidades por haber comprado uno de nuestros collares para mascotas</string>
 </resources>

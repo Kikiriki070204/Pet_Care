@@ -1,8 +1,10 @@
-package com.example.pet_care;
+package com.example.pet_care.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.pet_care.R;
 
 public class No_Log extends AppCompatActivity {
 
