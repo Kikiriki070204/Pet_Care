@@ -29,7 +29,7 @@
         android:id="@+id/textView"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/welcomeStart1"
+        android:text="@string/Bienvenida_Start_1"
         android:textSize="25sp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"

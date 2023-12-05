@@ -9,4 +9,5 @@
     <string name="pass">Contraseña</string>
     <string name="nombre">Nombre</string>
     <string name="apellidos">Apellidos</string>
+    <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas></string>
 </resources>
