@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.pet_care.R;
 
-public class FragmentStar1 extends Fragment {
+public class FragmentStar3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.no_log1, container, false);
+        return inflater.inflate(R.layout.no_log3, container, false);
     }
 }
