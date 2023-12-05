@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Pet_Care</string>
-    <string name="welcomeStart1"> <b>¡Bienvenido/a!</b>     Felicidades por haber comprado uno de nuestros collares para mascotas</string>
+    <string name="name">Pet Care</string>
+    <string name="txt1">Iniciar sesión</string>
+    <string name="txt2">Registrarse</string>
+    <string name="wcm">¡Bienvenido!</string>
+    <string name="hello">¡Hola!</string>
+    <string name="email">Correo electrónico</string>
+    <string name="pass">Contraseña</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas></string>
 </resources>
