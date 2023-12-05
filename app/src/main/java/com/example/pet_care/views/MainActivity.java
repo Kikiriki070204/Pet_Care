@@ -1,12 +1,13 @@
-package com.example.pet_care;
+package com.example.pet_care.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.os.Handler;
+
+import com.example.pet_care.R;
 
 public class MainActivity extends AppCompatActivity {
 

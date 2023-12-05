@@ -13,19 +13,19 @@
         android:theme="@style/Theme.Pet_Care"
         tools:targetApi="31">
         <activity
-            android:name=".login_page"
+            android:name=".views.login_page"
             android:exported="false" />
         <activity
-            android:name=".regist_page"
+            android:name=".views.regist_page"
             android:exported="false" />
         <activity
-            android:name=".Reg"
+            android:name=".views.Reg"
             android:exported="false" />
         <activity
-            android:name=".No_Log"
+            android:name=".views.No_Log"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".views.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
