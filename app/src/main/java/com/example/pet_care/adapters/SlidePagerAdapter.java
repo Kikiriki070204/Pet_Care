@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
 import com.example.pet_care.R;
 import com.example.pet_care.fragments.FragmentStar1;
@@ -14,7 +15,7 @@ import com.example.pet_care.fragments.FragmentStar3;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SlidePagerAdapter  extends PagerAdapter {
+public class SlidePagerAdapter  extends RecyclerView.Adapter {
     private List<Fragment> fragments = new ArrayList<>();
 
     public SlidePagerAdapter() {

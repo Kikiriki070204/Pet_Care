@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".views.No_Log">
 
-    <androidx.viewpager2.widget.ViewPager2
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

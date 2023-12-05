@@ -15,7 +15,7 @@ public class No_Log extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_log);
-        ViewPager pager = findViewById(R.id.vpStart);
+        ViewPager2 pager = findViewById(R.id.vpStart);
         pager.setAdapter(new SlidePagerAdapter());
 
     }
