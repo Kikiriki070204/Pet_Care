@@ -16,17 +16,23 @@ import android.widget.Button;
 import com.example.pet_care.R;
 import com.example.pet_care.adapters.SlidePagerAdapter;
 
-public class No_Log extends AppCompatActivity {
+public class No_Log extends AppCompatActivity implements  View.OnClickListener {
     private ViewPager2 viewPager;
-    Button button = findViewById(R.id.btNologinSkip);
     Intent intent = new Intent(this, login_page.class);
+    Button button = findViewById(R.id.btNologinSkip);
 
-button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(intent);
+
+    @Override
+    public void onClick(View v) {
+        button.setOnClickListener(this);
+        if (v.getId() == R.id.btNologinSkip) {
+            // Handle button click logic
+            if (currentFrame == totalFrames) {
+                button.setText("Iniciar sesión");
+            }
+            startActivity(new Intent(this, TargetActivity.class));
         }
-    });
+    }
 
 
     @Override
