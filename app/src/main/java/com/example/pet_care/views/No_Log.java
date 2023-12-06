@@ -5,9 +5,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
+import android.view.View.OnClickListener;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.example.pet_care.R;
@@ -15,7 +18,17 @@ import com.example.pet_care.adapters.SlidePagerAdapter;
 
 public class No_Log extends AppCompatActivity {
     private ViewPager2 viewPager;
-    private Button button;
+    Button button = findViewById(R.id.btNologinSkip);
+    Intent intent = new Intent(this, login_page.class);
+
+button.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            startActivity(intent);
+        }
+    });
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,4 +62,5 @@ public class No_Log extends AppCompatActivity {
         });
 
     }
+
 }
