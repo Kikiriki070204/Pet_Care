@@ -11,6 +11,10 @@
     <string name="apellidos">Apellidos</string>
     <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas></string>
     <string name="title_activity_home">Home</string>
+
+    <!-- strings que mantienen name -->
+    <string name="user">Hi</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
