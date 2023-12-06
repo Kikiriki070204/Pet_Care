@@ -1,11 +1,7 @@
 package com.example.pet_care.views;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
-import android.view.View.OnClickListener;
 
 
 import android.content.Intent;
@@ -16,23 +12,14 @@ import android.widget.Button;
 import com.example.pet_care.R;
 import com.example.pet_care.adapters.SlidePagerAdapter;
 
-public class No_Log extends AppCompatActivity implements  View.OnClickListener {
+public class No_Log extends AppCompatActivity  {
     private ViewPager2 viewPager;
-    Intent intent = new Intent(this, login_page.class);
-    Button button = findViewById(R.id.btNologinSkip);
+    //private Intent intent = new Intent(this, login_page.class);
+     private Button button ;
 
 
-    @Override
-    public void onClick(View v) {
-        button.setOnClickListener(this);
-        if (v.getId() == R.id.btNologinSkip) {
-            // Handle button click logic
-            if (currentFrame == totalFrames) {
-                button.setText("Iniciar sesión");
-            }
-            startActivity(new Intent(this, TargetActivity.class));
-        }
-    }
+
+
 
 
     @Override
@@ -40,6 +27,7 @@ public class No_Log extends AppCompatActivity implements  View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_no_log);
         viewPager = findViewById(R.id.vpStart);
+        button = findViewById(R.id.btnologinskip);
 
         // Create the adapter
         SlidePagerAdapter adapter = new SlidePagerAdapter(this);
@@ -50,23 +38,35 @@ public class No_Log extends AppCompatActivity implements  View.OnClickListener {
         // Add a listener to the ViewPager
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
-            public void onPageSelected(int position)
-            {
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                // Do something when the page scrolls
+            }
+
+            @Override
+            public void onPageSelected(int position) {
                 // Update the button position
                 switch (position) {
                     case 0:
-                        button.setX(0);
-                        break;
                     case 1:
-                        button.setX(100);
+                        button.setX(800);
+                        button.setText("Skip");
                         break;
                     default:
-                        button.setX(200);
+                        button.setX(450);
+                        button.setText("Inicia session");
                         break;
                 }
             }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                // Do something when the page scroll state changes
+            }
         });
 
+
     }
+
+
+
 
 }
