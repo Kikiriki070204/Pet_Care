@@ -7,10 +7,10 @@
     tools:context=".views.No_Log">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivstart1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/no_login_start_dog"
+        android:src="@drawable/dog_higfive"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,10 +32,10 @@
         android:text="@string/Bienvenida_Start_1"
         android:textSize="25sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/ivstart1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/ivstart1"
         app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
