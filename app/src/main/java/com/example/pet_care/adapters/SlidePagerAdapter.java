@@ -1,41 +1,45 @@
 package com.example.pet_care.adapters;
 
-import android.view.LayoutInflater;
+
+import android.os.Parcelable;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
-import com.example.pet_care.R;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.adapter.StatefulAdapter;
+
 import com.example.pet_care.fragments.FragmentStar1;
 import com.example.pet_care.fragments.FragmentStar2;
 import com.example.pet_care.fragments.FragmentStar3;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+public class SlidePagerAdapter extends FragmentStateAdapter {
+    public SlidePagerAdapter(FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
+    }
 
-public class SlidePagerAdapter  extends RecyclerView.Adapter {
-    private final List<String> titles = Arrays.asList("Tab 1", "Tab 2", "Tab 3");
-
-    public SlidePagerAdapter(FragmentManager fm) {
-        super(fm);
+    @NonNull
+    @Override
+    public Fragment createFragment(int position) {
+        switch (position) {
+            case 0:
+                return new FragmentStar1();
+            case 1:
+                return new FragmentStar2();
+            default:
+                return new FragmentStar3();
+        }
     }
 
     @Override
-    public Fragment getItem(int position) {
-        return FragmentStar1.newInstance(titles.get(position));
-    }
-
-    @Override
-    public int getCount() {
-        return titles.size();
-    }
-
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return titles.get(position);
+    public int getItemCount() {
+        return 3; // Replace with the actual number of fragments
     }
 }
