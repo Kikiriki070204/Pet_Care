@@ -62,6 +62,13 @@ public class No_Log extends AppCompatActivity  {
                 // Do something when the page scroll state changes
             }
         });
+        button.setOnClickListener(v -> {
+            // Create an intent to start Reg activity
+            Intent intent = new Intent(No_Log.this, Reg.class);
+
+            // Start the Reg activity
+            startActivity(intent);
+        });
 
 
     }
