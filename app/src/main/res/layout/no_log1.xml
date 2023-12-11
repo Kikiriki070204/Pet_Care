@@ -39,42 +39,6 @@
         app:layout_constraintTop_toBottomOf="@+id/ivstart1"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        app:flow_firstHorizontalStyle="packed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/circle" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        app:flow_firstHorizontalStyle="packed"
-        app:flow_firstVerticalStyle="packed"
-        app:flow_horizontalAlign="start"
-        app:flow_lastHorizontalStyle="packed"
-        app:flow_lastVerticalStyle="packed"
-        app:flow_verticalStyle="packed"
-        app:flow_wrapMode="chain"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:srcCompat="@drawable/circle" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
-        app:srcCompat="@drawable/circle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline6"
