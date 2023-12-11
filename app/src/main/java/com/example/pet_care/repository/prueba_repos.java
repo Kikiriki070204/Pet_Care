@@ -1,7 +1,9 @@
 package com.example.pet_care.repository;
 
+import android.content.Intent;
 import android.util.Log;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.pet_care.models.pruebamodel;
@@ -18,21 +20,33 @@ public class prueba_repos {
     void setRetrofit(){
         retrofit= request_1.getRetrofit();
     }
-    public MutableLiveData<pruebamodel> postModel(String nombre, String apellidos, String email, String password){
+    public MutableLiveData<pruebamodel> postModel(String nombre, String apellidos, String email,
+                                                  String password, String password_confirmation){
         setRetrofit();
         requestApi requestModel=retrofit.create(requestApi.class);
-        Call<pruebamodel> modelCall=requestModel.postModel(nombre, apellidos,email, password);
+        Call<pruebamodel> modelCall=requestModel.postModel(nombre, apellidos,email, password, password_confirmation);
         MutableLiveData<pruebamodel> mutable=new MutableLiveData<>();
         Log.d("KIARA", "aaa");
          modelCall.enqueue(new Callback<pruebamodel>() {
             @Override
             public void onResponse(Call<pruebamodel> call, Response<pruebamodel> response) {
                 Log.d("KIARA", "abba");
+                pruebamodel newModel;
 
-
-                if(response.isSuccessful()){
-                    pruebamodel newModel= response.body();
-                    mutable.setValue(newModel);
+                switch (response.code()){
+                    case 422:
+                        newModel=new pruebamodel();
+                        newModel.code=String.valueOf(response.code());
+                        mutable.setValue(newModel);
+                        break;
+                    case 201:
+                        newModel= response.body();
+                        if(newModel != null)
+                        {
+                            newModel.code= String.valueOf(response.code());
+                        }
+                        mutable.setValue(newModel);
+                        break;
                 }
             }
 

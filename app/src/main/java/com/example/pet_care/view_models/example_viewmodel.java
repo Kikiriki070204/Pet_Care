@@ -11,18 +11,19 @@ public class example_viewmodel extends ViewModel {
     private MutableLiveData<pruebamodel> model;
     private prueba_repos modelRepos;
 
-    public LiveData<pruebamodel> postModel(String nombre, String apellidos, String email, String password){
+    public LiveData<pruebamodel> postModel(String nombre, String apellidos, String email,
+                                           String password, String password_confirmation){
         if(model==null)
         {
             model= new MutableLiveData<>();
-            createModel(nombre, apellidos, email, password);
+            createModel(nombre, apellidos, email, password, password_confirmation);
         }
         return model;
     }
-    private void createModel(String nombre, String apellidos, String email, String password){
+    private void createModel(String nombre, String apellidos, String email, String password, String password_confirmation){
         if (modelRepos==null){
             modelRepos=new prueba_repos();
         }
-        model=modelRepos.postModel(nombre, apellidos, email, password);
+        model=modelRepos.postModel(nombre, apellidos, email, password, password_confirmation);
     }
 }

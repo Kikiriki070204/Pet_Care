@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.Pet_Care" parent="Base.Theme.Pet_Care" />
+    <style name="menuText">
+        <item name="fontFamily">
+            @font/alatsi
+        </item>
+    </style>
 </resources>

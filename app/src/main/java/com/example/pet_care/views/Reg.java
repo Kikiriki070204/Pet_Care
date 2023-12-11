@@ -23,6 +23,7 @@ public class Reg extends AppCompatActivity {
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(Reg.this, Home.class));
             }
         });
 

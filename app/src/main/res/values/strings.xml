@@ -7,10 +7,20 @@
     <string name="hello">¡Hola!</string>
     <string name="email">Correo electrónico</string>
     <string name="pass">Contraseña</string>
+    <string name="pass_conf">Confirmar contraseña</string>
     <string name="nombre">Nombre</string>
     <string name="apellidos">Apellidos</string>
     <string name="Info">¡Háblanos un poco sobre tu mascota!</string>
     <string name="Raza">Raza</string>
     <string name="ID">*Collar</string>
     <string name="ready">¡Empezar!</string>
+    <string name="item1">Mi cuenta</string>
+    <!-- strings que mantienen name -->
+    <string name="user">Hi</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 </resources>
