@@ -4,6 +4,7 @@ public class pruebamodel {
 public String nombre;
 public String apellidos;
 public String email;
+    public String code;
 
     public String getNombre() {
         return nombre;

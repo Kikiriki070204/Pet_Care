@@ -22,6 +22,9 @@
             android:name=".views.Settings_dog"
             android:exported="false" />
         <activity
+            android:name=".views.Home"
+            android:exported="false" />
+        <activity
             android:name=".views.registro_mascota"
             android:exported="false" />
         <activity

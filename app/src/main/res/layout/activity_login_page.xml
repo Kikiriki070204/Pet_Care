@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.regist_page"
-    android:background="#F4FFD2">
-
+    tools:context=".views.login_page"
+    android:background="@color/white">
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"
@@ -30,6 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/logo"></TextView>
 
     <androidx.cardview.widget.CardView
+        android:backgroundTint="#FFFCE0"
         android:id="@+id/form"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
