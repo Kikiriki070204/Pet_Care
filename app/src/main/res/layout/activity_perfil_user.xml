@@ -94,7 +94,31 @@
           android:inputType="text"
           android:hint="...">
       </EditText>
+      <View
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"></View>
 
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/email"
+          android:textStyle="bold"
+          android:textColor="@color/earth"
+          android:textSize="20sp"
+          android:fontFamily="@font/alatsi">
+      </TextView>
+      <View
+          android:layout_width="wrap_content"
+          android:layout_height="10dp"></View>
+      <TextView
+          android:id="@+id/email"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:text="Corre@yop.com"
+          android:fontFamily="@font/alatsi"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          android:inputType="textEmailAddress"></TextView>
       <View
           android:layout_width="wrap_content"
           android:layout_height="20dp"></View>

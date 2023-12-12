@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="10dp"></View>
             <TextView
-                android:id="@+id/email"
+                android:id="@+id/collarnum"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:text="#"
