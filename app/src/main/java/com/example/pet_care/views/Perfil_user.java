@@ -33,6 +33,10 @@ String userId;
         surname=findViewById(R.id.surname);
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
+        edit=findViewById(R.id.edit);
+        Safe=findViewById(R.id.safe);
+
+
         ViewModelProvider viewModel=new ViewModelProvider(this);
         profile_viewmodel profileViewModel=viewModel.get(profile_viewmodel.class);
         profileViewModel.getProfile(id).observe(this, profileModel -> {
