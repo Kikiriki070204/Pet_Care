@@ -11,4 +11,59 @@
             @font/alatsi
         </item>
     </style>
+
+
+    <!--Text Styles-->
+<style name="HomeTextHeaders">
+    <item name="fontFamily">@font/alatsi</item>
+    <item name="android:textColor">@color/brown</item>
+    <item name="android:textSize">25sp</item>
+    <item name="android:layout_marginLeft">20dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+</style>
+
+    <style name="HomeTextHeaders2">
+        <item name="fontFamily">@font/alatsi</item>
+        <item name="android:textColor">@color/brown</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="PetHeader">
+        <item name="fontFamily">@font/baloo</item>
+        <item name="android:textColor">@color/dark_brown</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="PetHey">
+        <item name="fontFamily">@font/alatsi</item>
+        <item name="android:textColor">#FFA577</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="NameHomeTextHeaders">
+        <item name="fontFamily">@font/alatsi</item>
+        <item name="android:textColor">@color/sage</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+
+    <style name="TitleText">
+        <item name="fontFamily">
+            @font/baloo
+        </item>
+        <item name="android:textSize">
+            27sp
+        </item>
+    </style>
+    <style name="MenuItem">
+        <item name="actionMenuTextAppearance">
+            @style/menuText
+        </item>
+    </style>
 </resources>

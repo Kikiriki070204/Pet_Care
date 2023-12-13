@@ -34,6 +34,7 @@ public class regist_page extends AppCompatActivity {
        registrar.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
                ViewModelProvider provider=new ViewModelProvider(regist_page.this);
                example_viewmodel viewmodel=provider.get(example_viewmodel.class);
                viewmodel.postModel(name.getText().toString(),last_name.getText().toString(),
@@ -42,11 +43,24 @@ public class regist_page extends AppCompatActivity {
                    public void onChanged(pruebamodel pruebamodel) {
                        if (pruebamodel != null && pruebamodel.code != null) {
                            switch (pruebamodel.code) {
+                               case "409":
+                                   Toast.makeText(regist_page.this, "¡Error! Este correo ya está siendo utilizado ", Toast.LENGTH_SHORT).show();
+                                   name.getText().clear();
+                                   last_name.getText().clear();
+                                   email.getText().clear();
+                                   password.getText().clear();
+                                   password_conf.getText().clear();
+                                   break;
                                case "422":
                                    Toast.makeText(regist_page.this, "¡Error! Verifica tus datos", Toast.LENGTH_SHORT).show();
+                                   name.getText().clear();
+                                   last_name.getText().clear();
+                                   email.getText().clear();
+                                   password.getText().clear();
+                                   password_conf.getText().clear();
                                    break;
                                case "201":
-                                   startActivity(new Intent(regist_page.this, Home.class));
+                                   startActivity(new Intent(regist_page.this, login_page.class));
                                    break;
                            }
                        }
