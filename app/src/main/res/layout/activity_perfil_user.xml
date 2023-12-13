@@ -151,6 +151,15 @@
           android:fontFamily="@font/alatsi"
           android:text="@string/Safe"
           android:textSize="18sp"></Button>
+      <Button
+          android:id="@+id/regresar"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:backgroundTint="@color/sage"
+          android:fontFamily="@font/alatsi"
+          android:text="@string/Safe"
+          android:textSize="18sp"></Button>
 
       <View
           android:layout_width="wrap_content"

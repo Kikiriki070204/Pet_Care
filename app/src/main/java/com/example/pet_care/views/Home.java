@@ -24,6 +24,7 @@ public class Home extends AppCompatActivity {
 TextView nombre_user,hey;
 ImageView add;
 RecyclerView recycler;
+public int userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ RecyclerView recycler;
         recycler=findViewById(R.id.recyclerView);
         add=findViewById(R.id.add_btn);
         Intent a=getIntent();
-        int userId=a.getIntExtra("id",-1);
+        userId=a.getIntExtra("id",-1);
         String id=String.valueOf(userId);
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +88,9 @@ RecyclerView recycler;
         int id= item.getItemId();
         if(id==R.id.item1)
         {
-            startActivity(new Intent(Home.this, MainActivity.class));
+            Intent p=(new Intent(Home.this, Perfil_user.class));
+            p.putExtra("userid",userId);
+            startActivity(p);
         }
         else if(id==R.id.log_out)
         {
