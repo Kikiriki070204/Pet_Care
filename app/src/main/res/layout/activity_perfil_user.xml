@@ -6,15 +6,16 @@
     android:layout_height="match_parent">
 
   <View
+      android:id="@+id/view3"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
+      android:background="@color/light_green"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.5"
-      android:background="@color/light_green"/>
+      app:layout_constraintVertical_bias="0.5" />
 
   <androidx.cardview.widget.CardView
       android:id="@+id/form"
@@ -55,45 +56,59 @@
       <View
           android:layout_width="wrap_content"
           android:layout_height="10dp"></View>
+
       <TextView
           android:id="@+id/nombre"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:fontFamily="@font/alatsi"
           android:text="@string/nombre"
-          android:textStyle="bold"
           android:textColor="@color/earth"
           android:textSize="20sp"
-          android:fontFamily="@font/alatsi">
-      </TextView>
-      <EditText
+          android:textStyle="bold"></TextView>
+
+      <View
+          android:layout_width="wrap_content"
+          android:layout_height="10dp"></View>
+
+      <TextView
           android:id="@+id/name"
-          android:layout_width="match_parent"
+          android:layout_width="wrap_content"
           android:layout_height="50dp"
-          android:inputType="text"
-          android:hint="...">
-      </EditText>
+          android:fontFamily="@font/alatsi"
+          android:inputType="textEmailAddress"
+          android:text="Name"
+          android:textSize="20sp"
+          android:textStyle="bold"></TextView>
 
 
       <View
           android:layout_width="wrap_content"
           android:layout_height="20dp"></View>
+
       <TextView
           android:id="@+id/ap"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:fontFamily="@font/alatsi"
           android:text="@string/apellidos"
-          android:textStyle="bold"
           android:textColor="@color/earth"
           android:textSize="20sp"
-          android:fontFamily="@font/alatsi">
-      </TextView>
-      <EditText
-          android:id="@+id/last_name"
-          android:layout_width="match_parent"
+          android:textStyle="bold"></TextView>
+
+      <View
+          android:layout_width="wrap_content"
+          android:layout_height="10dp"></View>
+
+      <TextView
+          android:id="@+id/surname"
+          android:layout_width="wrap_content"
           android:layout_height="50dp"
-          android:inputType="text"
-          android:hint="...">
-      </EditText>
+          android:fontFamily="@font/alatsi"
+          android:inputType="textEmailAddress"
+          android:text="Surname"
+          android:textSize="20sp"
+          android:textStyle="bold"></TextView>
       <View
           android:layout_width="wrap_content"
           android:layout_height="20dp"></View>
@@ -101,24 +116,26 @@
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
+          android:fontFamily="@font/alatsi"
           android:text="@string/email"
-          android:textStyle="bold"
           android:textColor="@color/earth"
           android:textSize="20sp"
-          android:fontFamily="@font/alatsi">
-      </TextView>
+          android:textStyle="bold"></TextView>
+
       <View
           android:layout_width="wrap_content"
           android:layout_height="10dp"></View>
+
       <TextView
           android:id="@+id/email"
           android:layout_width="wrap_content"
           android:layout_height="50dp"
-          android:text="Corre@yop.com"
           android:fontFamily="@font/alatsi"
+          android:inputType="textEmailAddress"
+          android:text="Corre@yop.com"
           android:textSize="20sp"
-          android:textStyle="bold"
-          android:inputType="textEmailAddress"></TextView>
+          android:textStyle="bold"></TextView>
+
       <View
           android:layout_width="wrap_content"
           android:layout_height="20dp"></View>
@@ -131,13 +148,14 @@
           android:textColor="@color/earth"
           android:textSize="20sp"
           android:textStyle="bold"></TextView>
+
       <EditText
           android:id="@+id/password"
           android:layout_width="match_parent"
           android:layout_height="50dp"
-          android:inputType="textPassword"
-          android:hint="...">
-      </EditText>
+          android:hint="..."
+          android:inputType="textPassword"></EditText>
+
       <View
           android:layout_width="wrap_content"
           android:layout_height="10dp"></View>
@@ -151,6 +169,7 @@
           android:fontFamily="@font/alatsi"
           android:text="@string/Safe"
           android:textSize="18sp"></Button>
+
       <Button
           android:id="@+id/regresar"
           android:layout_width="wrap_content"
@@ -188,6 +207,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/light_green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/name_app"
+        app:titleTextAppearance="@style/TitleText"
+        app:titleTextColor="@color/dark_brown"></androidx.appcompat.widget.Toolbar>
 
     <ImageView
         android:id="@+id/pet_image"
@@ -217,17 +248,6 @@
         app:layout_constraintTop_toBottomOf="@+id/pet_image" />
 
     <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-
-        android:background="@drawable/home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-      />
-
-    <ImageButton
         android:id="@+id/settings"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -237,6 +257,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
