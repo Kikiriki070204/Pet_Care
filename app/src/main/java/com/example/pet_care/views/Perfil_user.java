@@ -17,7 +17,7 @@ import com.example.pet_care.view_models.profile_viewmodel;
 
 public class Perfil_user extends AppCompatActivity {
 TextView name,surname,email,password;
-Button edit,Safe;
+Button edit,return_home;
 String userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,13 @@ String userId;
         email=findViewById(R.id.email);
         password=findViewById(R.id.password);
         edit=findViewById(R.id.edit);
-        Safe=findViewById(R.id.safe);
+        return_home=findViewById(R.id.return_home);
+        return_home.setOnClickListener(v -> {
+            Intent o=new Intent(Perfil_user.this,Home.class);
+            o.putExtra("id",userId);
+            startActivity(o);
+        });
+
 
 
         ViewModelProvider viewModel=new ViewModelProvider(this);

@@ -159,28 +159,38 @@
       <View
           android:layout_width="wrap_content"
           android:layout_height="10dp"></View>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+  <View
+      android:layout_width="30dp"
+      android:layout_height="10dp"></View>
+  <Button
+      android:id="@+id/return_home"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:backgroundTint="@color/sage"
+      android:fontFamily="@font/alatsi"
+      android:text="Regresar"
+      android:textSize="18sp"></Button>
+  <View
+      android:layout_width="60dp"
+      android:layout_height="10dp"></View>
+  <Button
+      android:id="@+id/edit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:backgroundTint="@color/sage"
+      android:fontFamily="@font/alatsi"
+      android:text="@string/edit"
+      android:textSize="18sp"></Button>
+</LinearLayout>
 
-      <Button
-          android:id="@+id/edit"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:backgroundTint="@color/sage"
-          android:fontFamily="@font/alatsi"
-          android:text="@string/edit"
-          android:textSize="18sp"></Button>
 
-      <Button
-          android:id="@+id/safe"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:backgroundTint="@color/sage"
-          android:fontFamily="@font/alatsi"
-          android:text="@string/Safe"
-          android:textSize="18sp"></Button>
-
-      <View
+     <View
           android:layout_width="wrap_content"
           android:layout_height="10dp"></View>
     </LinearLayout>
