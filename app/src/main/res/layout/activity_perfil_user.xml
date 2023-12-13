@@ -161,17 +161,17 @@
           android:layout_height="10dp"></View>
 
       <Button
-          android:id="@+id/registrar"
+          android:id="@+id/edit"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:backgroundTint="@color/sage"
           android:fontFamily="@font/alatsi"
-          android:text="@string/Safe"
+          android:text="@string/edit"
           android:textSize="18sp"></Button>
 
       <Button
-          android:id="@+id/regresar"
+          android:id="@+id/safe"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
