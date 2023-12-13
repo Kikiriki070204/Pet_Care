@@ -1,9 +1,9 @@
-<resources >
-    <string  name="app_name">Pet_Care</string>
-    <string  name="name_app">Pet Care</string>
+<resources>
+    <string name="app_name">Pet_Care</string>
+    <string name="name_app">Pet Care</string>
     <string name="txt1">Iniciar sesión</string>
     <string name="txt2">Registrarse</string>
-    <string name="wcm">¡Bienvenido!</string>
+    <string name="wcm">¡Bienvenido(a)!</string>
     <string name="hello">¡Hola!</string>
     <string name="email">Correo electrónico</string>
     <string name="pass">Contraseña</string>
@@ -13,13 +13,16 @@
     <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas></string>
     <string name="title_activity_home">Home</string>
     <string name="Info">¡Háblanos un poco sobre tu mascota!</string>
-    <string name="Raza">Raza</string>
+    <string name="Peso">Peso</string>
     <string name="ID">*Collar</string>
     <string name="ready">¡Empezar!</string>
     <string name="item1">Mi cuenta</string>
+    <string name="icon1">Salud</string>
+    <string name="icon2">Bienestar</string>
+    <string name="icon3">Seguridad</string>
     <!-- strings que mantienen name -->
     <string name="user">Hi</string>
-
+    <string name="greet">¿Qué información sobre tu mascota te proporcionamos con nuestra aplicación?</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

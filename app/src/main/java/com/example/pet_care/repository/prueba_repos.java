@@ -34,6 +34,7 @@ public class prueba_repos {
                 pruebamodel newModel;
 
                 switch (response.code()){
+                    case 409:
                     case 422:
                         newModel=new pruebamodel();
                         newModel.code=String.valueOf(response.code());

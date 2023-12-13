@@ -26,4 +26,11 @@ public class example_viewmodel extends ViewModel {
         }
         model=modelRepos.postModel(nombre, apellidos, email, password, password_confirmation);
     }
+    public void clearError() {
+        if (model != null && model.getValue() != null) {
+            pruebamodel newModel=model.getValue();
+            newModel.code = null;
+            model.setValue(newModel);
+        }
+    }
 }
