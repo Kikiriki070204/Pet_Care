@@ -10,13 +10,16 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.pet_care.R;
 import com.example.pet_care.view_models.profile_viewmodel;
 
 public class Perfil_user extends AppCompatActivity {
-TextView name,surname,email,password;
+TextView name,surname,email;
+EditText password;
+String passcheck;
 Button edit,return_home;
 String userId;
     @Override
@@ -54,7 +57,7 @@ String userId;
                         name.setText(profileModel.getName());
                         surname.setText(profileModel.getSurname());
                         email.setText(profileModel.getEmail());
-                        password.setText(profileModel.getPassword());
+                        passcheck=profileModel.getPassword();
                         break;
                     case "404":
                         name.setText("No se encontro el usuario");
@@ -62,6 +65,21 @@ String userId;
                 }
             }
         });
+
+        edit.setOnClickListener(v -> {
+
+            if(password.getText().toString().equals(passcheck))
+            {
+                Intent o=new Intent(Perfil_user.this,Editar_password.class);
+                o.putExtra("id",userId);
+                startActivity(o);
+            }
+            else
+            {
+                password.setError("Contraseña incorrecta");
+            }
+        });
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
