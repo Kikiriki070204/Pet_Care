@@ -33,7 +33,7 @@ public class HomeRepos {
 
                 switch (response.code())
                 {
-                    case 404:
+                    case 401:
                         homeModel=new HomeModel();
                         homeModel.code=String.valueOf(response.code());
                         mutable.setValue(homeModel);

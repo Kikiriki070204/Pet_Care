@@ -9,6 +9,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface HomeRequest {
-    @GET("home/{id}")
+    @GET("pets/mypets/{id}")
     Call<HomeModel> getHome(@Path("id") String id);
 }

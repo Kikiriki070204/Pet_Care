@@ -46,6 +46,7 @@ public class LoginRepos {
                         if(loginModel != null)
                         {
                             loginModel.setId(response.body().getId());
+                            loginModel.setNombre(response.body().getNombre());
                             loginModel.code=String.valueOf(response.code());
                         }
                         mutable.setValue(loginModel);

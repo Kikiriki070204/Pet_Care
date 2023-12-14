@@ -23,6 +23,7 @@
         android:backgroundTint="@color/light_green"
         android:textColor="@color/brown"
         android:text="Skip"
+        android:fontFamily="@font/baloo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.89"
