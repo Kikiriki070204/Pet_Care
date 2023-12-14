@@ -32,34 +32,31 @@ public class Switch_buzzer extends AppCompatActivity {
         String id = String.valueOf(userId);
         switch1 = findViewById(R.id.switch_buzzer);
 
-        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                                               @Override
-                                               public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                                                   ViewModelProvider viewModelProvider = new ViewModelProvider(Switch_buzzer.this);
-                                                   Switch_viewmodel switch_viewmodel = viewModelProvider.get(Switch_viewmodel.class);
-                                                   switch_viewmodel.switchchange(id).observe(Switch_buzzer.this, new Observer<SwitchModel>() {
-                                                       @Override
-                                                       public void onChanged(SwitchModel switchModel) {
-                                                           if (switchModel != null && switchModel.code != null) {
-                                                               switch (switchModel.code) {
-                                                                   case "500":
-                                                                   case "422":
-                                                                   case "404":
-                                                                       Toast.makeText(Switch_buzzer.this, "¡Error! Buzzer no recorido", Toast.LENGTH_SHORT).show();
-                                                                       break;
-                                                                   case "200":
-                                                                       Toast.makeText(Switch_buzzer.this, "yea! works", Toast.LENGTH_SHORT).show();
+        switch1.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            ViewModelProvider viewModelProvider = new ViewModelProvider(Switch_buzzer.this);
+            Switch_viewmodel switch_viewmodel = viewModelProvider.get(Switch_viewmodel.class);
+            switch_viewmodel.switchchange(id).observe(Switch_buzzer.this, new Observer<SwitchModel>() {
+                @Override
+                public void onChanged(SwitchModel switchModel) {
+                    if (switchModel != null && switchModel.code != null) {
+                        switch (switchModel.code) {
+                            case "500":
+                            case "422":
+                            case "404":
+                                Toast.makeText(Switch_buzzer.this, "¡Error! Buzzer no recorido", Toast.LENGTH_SHORT).show();
+                                break;
+                            case "200":
+                                Toast.makeText(Switch_buzzer.this, "yea! works", Toast.LENGTH_SHORT).show();
 
-                                                                       Intent i = new Intent(getApplicationContext(), Home.class);
-                                                                       i.putExtra("id", userId);
-                                                                       startActivity(i);
-                                                                       break;
-                                                               }
-                                                           }
-                                                       }
-                                                   });
-                                               }
-                                           }
+                                Intent i = new Intent(getApplicationContext(), Home.class);
+                                i.putExtra("id", userId);
+                                startActivity(i);
+                                break;
+                        }
+                    }
+                }
+            });
+        }
         );
 
     }
