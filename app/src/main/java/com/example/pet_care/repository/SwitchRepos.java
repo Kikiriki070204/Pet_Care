@@ -9,6 +9,7 @@ import com.example.pet_care.views.Switch_buzzer;
 
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 
 public class SwitchRepos {
@@ -23,7 +24,7 @@ public class SwitchRepos {
         MutableLiveData<SwitchModel> mutable=new MutableLiveData<>();
         SwitchModelCall.enqueue(new Callback<SwitchModel>() {
             @Override
-            public void onResponse(retrofit2.Call<SwitchModel> call, retrofit2.Response<SwitchModel> response) {
+            public void onResponse(Call<SwitchModel> call, Response<SwitchModel> response) {
                 SwitchModel switchModel;
                 switch(response.code()) {
                     case 422:
@@ -48,7 +49,7 @@ public class SwitchRepos {
             }
 
             @Override
-            public void onFailure(retrofit2.Call<SwitchModel> call, Throwable t) {
+            public void onFailure(Call<SwitchModel> call, Throwable t) {
 
             }
         });
