@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Pet_Care"
         tools:targetApi="31">
         <activity
+            android:name=".views.Switch_buzzer"
+            android:exported="false" />
+        <activity
             android:name=".views.Editar_password"
             android:exported="false" />
         <activity
