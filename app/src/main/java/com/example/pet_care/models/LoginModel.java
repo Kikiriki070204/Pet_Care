@@ -6,18 +6,28 @@ public class LoginModel {
 
     public String code;
 
-    public int id;
+    public int id_usuario;
+
+    public String nombre;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public String getEmail() {
         return email;
     }
 
     public int getId() {
-        return id;
+        return id_usuario;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id_usuario = id;
     }
 
     public void setEmail(String email) {

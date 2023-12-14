@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@id/logo"></TextView>
 
     <androidx.cardview.widget.CardView
-        android:backgroundTint="#FFFCE0"
+        android:backgroundTint="@color/bg"
         android:id="@+id/form"
         android:layout_width="380dp"
         android:layout_height="wrap_content"

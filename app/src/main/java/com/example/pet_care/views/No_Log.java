@@ -53,7 +53,7 @@ public class No_Log extends AppCompatActivity  {
                         break;
                     default:
                         button.setX(450);
-                        button.setText("Inicia session");
+                        button.setText("¡Empezar!");
                         break;
                 }
             }

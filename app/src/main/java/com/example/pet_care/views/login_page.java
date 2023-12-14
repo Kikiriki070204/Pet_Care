@@ -43,10 +43,17 @@ Button login;
                                 case "401":
                                 case "400":
                                     Toast.makeText(login_page.this, "¡Error! Contraseña o correo no son correctos", Toast.LENGTH_SHORT).show();
+                                    loginviewmodel.Login(email.getText().toString(),password.getText().toString()).observe(login_page.this, new Observer<LoginModel>() {
+                                        @Override
+                                        public void onChanged(LoginModel loginModel) {
+
+                                        }
+                                    });
                                     break;
                                 case "201":
                                    Intent i=new Intent(getApplicationContext(), Home.class);
-                                   i.putExtra("id",loginModel.id);
+                                   i.putExtra("id",loginModel.id_usuario);
+                                   i.putExtra("nombre",loginModel.nombre);
                                     startActivity(i);
                                     break;
                             }

@@ -36,6 +36,7 @@ RecyclerView recycler;
         recycler=findViewById(R.id.recyclerView);
         add=findViewById(R.id.add_btn);
         Intent a=getIntent();
+        String nombre_us=a.getStringExtra("nombre");
         int userId=a.getIntExtra("id",-1);
         String id=String.valueOf(userId);
 
@@ -44,6 +45,7 @@ RecyclerView recycler;
             public void onClick(View v) {
                 Intent o=new Intent(Home.this,registro_mascota.class);
                 o.putExtra("id_user",userId);
+
                 startActivity(o);
             }
         });
@@ -57,14 +59,15 @@ RecyclerView recycler;
                 {
                     switch (homeModel.code)
                     {
-                        case "404":
-                            nombre_user.setText(homeModel.nombre);
+                        case "401":
+                            nombre_user.setText(nombre_us);
                             hey.setText("¡Aún no tienes mascotas registradas!");
+
                             break;
                         case "200":
-                            nombre_user.setText(homeModel.nombre);
+                            nombre_user.setText(nombre_us);
                             if(homeModel.pets==null) {
-                                hey.setText("¡Aún no tienes mascotas registradas!");
+                                hey.setText("¡!");
                             }
                             break;
                     }
