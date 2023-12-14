@@ -32,6 +32,9 @@
     <string name="weight">Peso</string>
     <string name="your_data">Tus datos</string>
     <string name="edit">Editar</string>
+    <string name="ingresa_password">Ingresa contraseña para editar</string>
+    <string name="passConf">Confirmar Contraseña</string>
+    <string name="change_pass">Cambiar Contraseña</string>
 
 
 </resources>

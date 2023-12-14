@@ -153,7 +153,7 @@
           android:id="@+id/password"
           android:layout_width="match_parent"
           android:layout_height="50dp"
-          android:hint="..."
+          android:hint="@string/ingresa_password"
           android:inputType="textPassword"></EditText>
 
       <View
