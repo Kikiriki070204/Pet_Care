@@ -91,7 +91,7 @@ public int userId;
         int id= item.getItemId();
         if(id==R.id.item1)
         {
-            startActivity(new Intent(Home.this, MainActivity.class));
+            startActivity(new Intent(Home.this,Perfil_user.class));
         }
         else if(id==R.id.log_out)
         {
