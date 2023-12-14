@@ -2,11 +2,12 @@ package com.example.pet_care.view_models;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.example.pet_care.models.SwitchModel;
 import com.example.pet_care.repository.SwitchRepos;
 
-public class Switch_viewmodel {
+public class Switch_viewmodel extends ViewModel {
     private MutableLiveData<SwitchModel> switchModel;
     private SwitchRepos switchRepos;
     public LiveData<SwitchModel> switchchange(String Switch){
