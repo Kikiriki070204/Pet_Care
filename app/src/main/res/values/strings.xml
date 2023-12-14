@@ -10,7 +10,10 @@
     <string name="pass_conf">Confirmar contraseña</string>
     <string name="nombre">Nombre</string>
     <string name="apellidos">Apellidos</string>
-    <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas></string>
+    <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas</string>
+    <string name="nolog2_1">¿Como funciona?\nNecesitarás un collar</string>
+    <string name="nolog2_2">Solo necesitas adquirir uno de nuestros collares y registrarte </string>
+    <string name="nolog3">Ten la tranquilidad de saber que tu mascota está a salvo</string>
     <string name="title_activity_home">Home</string>
     <string name="Info">¡Háblanos un poco sobre tu mascota!</string>
     <string name="Peso">Peso</string>
@@ -31,6 +34,7 @@
     <string name="Safe">Guardar</string>
     <string name="weight">Peso</string>
     <string name="your_data">Tus datos</string>
+    <string name="collar_data">Estatus</string>
     <string name="edit">Editar</string>
     <string name="ingresa_password">Ingresa contraseña para editar</string>
     <string name="passConf">Confirmar Contraseña</string>

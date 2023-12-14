@@ -11,7 +11,7 @@ import retrofit2.http.POST;
 
 public interface requestApi {
     @FormUrlEncoded
-    @POST("register")
+    @POST("auth/register")
     Call<pruebamodel> postModel(@Field("nombre") String nombre,
                                 @Field("apellidos") String apellidos,
                                 @Field("email") String email,
