@@ -92,18 +92,15 @@ String userId;
         int id= item.getItemId();
         if(id==R.id.item1)
         {
-            Intent p=(new Intent(this, Perfil_user.class));
-            p.putExtra("userid",userId);
-            startActivity(p);
+            startActivity(new Intent(Perfil_user.this,Perfil_user.class));
         }
         else if(id==R.id.log_out)
         {
-            startActivity(new Intent(this, Reg.class));
-        } else if (id == R.id.home) {
-            Intent p=(new Intent(this, Home.class));
-            p.putExtra("userid",userId);
-            startActivity(p);
-
+            startActivity(new Intent(Perfil_user.this, Reg.class));
+        }
+        else if (id==R.id.home)
+        {
+            startActivity(new Intent(Perfil_user.this, Home.class));
         }
         return true;
     }

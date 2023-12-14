@@ -97,6 +97,10 @@ public int userId;
         {
             startActivity(new Intent(Home.this, Reg.class));
         }
+        else if (id==R.id.home)
+        {
+            startActivity(new Intent(Home.this, Home.class));
+        }
         return true;
     }
 }

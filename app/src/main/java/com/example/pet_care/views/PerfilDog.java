@@ -1,12 +1,17 @@
 package com.example.pet_care.views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +34,9 @@ public class PerfilDog extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_dog);
+        Toolbar toolbar;
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         pet_nom=findViewById(R.id.pet_nom);
         recycler=findViewById(R.id.recyclerView);
@@ -58,7 +66,29 @@ public class PerfilDog extends AppCompatActivity {
         });
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id= item.getItemId();
+        if(id==R.id.item1)
+        {
+            startActivity(new Intent(PerfilDog.this,Perfil_user.class));
+        }
+        else if(id==R.id.log_out)
+        {
+            startActivity(new Intent(PerfilDog.this, Reg.class));
+        }
+        else if (id==R.id.home)
+        {
+            startActivity(new Intent(PerfilDog.this, Home.class));
+        }
+        return true;
+    }
     private void getRecycler()
     {
 
