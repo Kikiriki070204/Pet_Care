@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             style="@style/NameHomeTextHeaders"
             android:layout_below="@id/logo_home"
-            android:layout_marginLeft="150dp">
+            android:layout_marginLeft="155dp">
         </TextView>
 
         <androidx.cardview.widget.CardView
@@ -55,12 +55,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/collar_data"
+                        style="@style/NameHomeTextHeaders"
                         android:layout_marginBottom="20dp">
                     </TextView>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/stat"
                         android:layout_marginLeft="20dp">

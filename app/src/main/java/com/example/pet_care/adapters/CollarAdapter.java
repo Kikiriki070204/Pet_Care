@@ -47,7 +47,7 @@ public class CollarAdapter extends RecyclerView.Adapter<CollarAdapter.ViewHolder
         TextView valor;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            nombre=itemView.findViewById(R.id.pet_nom);
+            nombre=itemView.findViewById(R.id.nombre_sensor);
             valor=itemView.findViewById(R.id.data);
         }
         public void setdata(DataModel data) {
