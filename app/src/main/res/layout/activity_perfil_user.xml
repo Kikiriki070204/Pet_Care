@@ -230,18 +230,6 @@
         app:titleTextAppearance="@style/TitleText"
         app:titleTextColor="@color/dark_brown"></androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/pet_image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/doggy"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/pet_name"
-        app:layout_constraintEnd_toEndOf="@+id/pet_name"
-        app:layout_constraintStart_toStartOf="@+id/pet_name"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/pet_name"
         android:layout_width="wrap_content"
@@ -255,7 +243,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pet_image" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 

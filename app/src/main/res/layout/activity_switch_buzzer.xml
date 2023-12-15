@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.Switch_buzzer">
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -166,18 +164,6 @@
                 app:titleTextAppearance="@style/TitleText"
                 app:titleTextColor="@color/dark_brown"></androidx.appcompat.widget.Toolbar>
 
-            <ImageView
-                android:id="@+id/pet_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/doggy"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/pet_name"
-                app:layout_constraintEnd_toEndOf="@+id/pet_name"
-                app:layout_constraintStart_toStartOf="@+id/pet_name"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
                 android:id="@+id/pet_name"
                 android:layout_width="wrap_content"
@@ -191,7 +177,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pet_image" />
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <ImageButton
                 android:id="@+id/settings"
