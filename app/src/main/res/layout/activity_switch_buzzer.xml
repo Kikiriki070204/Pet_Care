@@ -74,10 +74,11 @@
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/alatsi"
                         android:textColor="@color/brown"></TextView>
-                <Switch
-                    android:id="@+id/switch_buzzer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"></Switch>
+
+                    <Switch
+                        android:id="@+id/switch_buzzer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></Switch>
                 </LinearLayout>
 
 

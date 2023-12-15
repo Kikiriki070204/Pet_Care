@@ -5,9 +5,11 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface MapRequest {
-    @GET("ruta/para/latitud")
+    @GET("guzzle/gpslat")
     Call<Double> getLatitude();
 
-    @GET("ruta/para/longitud")
+    @GET("guzzle/gpslong")
     Call<Double> getLongitude();
+
+
 }

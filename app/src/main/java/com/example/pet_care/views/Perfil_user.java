@@ -21,14 +21,16 @@ TextView name,surname,email;
 EditText password;
 String passcheck;
 Button edit,return_home;
-String userId;
+public  String nombre;
+ public  int userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_user);
         Intent a=getIntent();
-        int userId=a.getIntExtra("id",-1);
+        userId=a.getIntExtra("id",-1);
         String id=String.valueOf(userId);
+        nombre=a.getStringExtra("nombre");
         Toolbar toolbar;
         toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,6 +43,7 @@ String userId;
         return_home.setOnClickListener(v -> {
             Intent o=new Intent(Perfil_user.this,Home.class);
             o.putExtra("id",userId);
+            o.putExtra("nombre",nombre);
             startActivity(o);
         });
 
@@ -54,8 +57,8 @@ String userId;
                 switch (profileModel.code)
                 {
                     case "200":
-                        name.setText(profileModel.getName());
-                        surname.setText(profileModel.getSurname());
+                        name.setText(profileModel.getNombre());
+                        surname.setText(profileModel.getApellidos());
                         email.setText(profileModel.getEmail());
                         passcheck=profileModel.getPassword();
                         break;
@@ -101,6 +104,10 @@ String userId;
         else if (id==R.id.home)
         {
             startActivity(new Intent(Perfil_user.this, Home.class));
+            Intent g=new Intent(Perfil_user.this,Home.class);
+            g.putExtra("id",userId);
+            g.putExtra("nombre",nombre);
+            startActivity(g);
         }
         return true;
     }

@@ -31,8 +31,10 @@ import java.util.List;
 public class Home extends AppCompatActivity implements PetListener {
 TextView nombre_user,hey;
 ImageView add;
-ImageButton Seguridad;
+ImageView Seguridad;
 RecyclerView recycler;
+public int userId;
+public String nombre_us;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,16 +48,16 @@ RecyclerView recycler;
         add=findViewById(R.id.add_btn);
         Seguridad=findViewById(R.id.icon3);
         Intent a=getIntent();
-        String nombre_us=a.getStringExtra("nombre");
-        int userId=a.getIntExtra("id",-1);
+        nombre_us=a.getStringExtra("nombre");
+        userId=a.getIntExtra("id",-1);
         String id_usuario=String.valueOf(userId);
 
         Seguridad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(Home.this,Switch_buzzer.class);
-                i.putExtra("id_user",userId);
-                startActivity(i);
+                Intent f=new Intent(Home.this, Switch_buzzer.class);
+                f.putExtra("id_user",userId);
+                startActivity(f);
             }
         });
 
@@ -115,7 +117,10 @@ RecyclerView recycler;
         int id= item.getItemId();
         if(id==R.id.item1)
         {
-            startActivity(new Intent(Home.this, Perfil_user.class));
+            Intent k=new Intent(Home.this, Perfil_user.class);
+            k.putExtra("id",userId);
+            k.putExtra("nombre",nombre_us);
+            startActivity(k);
         }
         else if(id==R.id.log_out)
         {
@@ -129,6 +134,8 @@ RecyclerView recycler;
         Intent x=new Intent(Home.this,Profile_Dog.class);
         x.putExtra("pet_name",pet.nombre);
         x.putExtra("id_masc",pet.id_mascota);
+        x.putExtra("id",userId);
+        x.putExtra("nombre",nombre_us);
         startActivity(x);
     }
 }
