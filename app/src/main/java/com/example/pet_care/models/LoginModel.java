@@ -22,12 +22,12 @@ public class LoginModel {
         return email;
     }
 
-    public int getId() {
+    public int getId_usuario() {
         return id_usuario;
     }
 
-    public void setId(int id) {
-        this.id_usuario = id;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public void setEmail(String email) {

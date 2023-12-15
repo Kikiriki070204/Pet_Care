@@ -33,7 +33,7 @@ public class HomeRepos {
 
                 switch (response.code())
                 {
-                    case 401:
+                    case 404:
                         homeModel=new HomeModel();
                         homeModel.code=String.valueOf(response.code());
                         mutable.setValue(homeModel);
@@ -42,8 +42,7 @@ public class HomeRepos {
                         homeModel=response.body();
                         if(homeModel != null)
                         {
-                            homeModel.setNombre(response.body().getNombre());
-                            homeModel.setPets(response.body().getPets());
+                            homeModel.pets=response.body().getPets();
                             homeModel.code=String.valueOf(response.code());
                         }
                         mutable.setValue(homeModel);

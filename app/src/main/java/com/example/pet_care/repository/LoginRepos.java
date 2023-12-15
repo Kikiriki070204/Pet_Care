@@ -45,7 +45,7 @@ public class LoginRepos {
 
                         if(loginModel != null)
                         {
-                            loginModel.setId(response.body().getId());
+                            loginModel.setId_usuario(response.body().getId_usuario());
                             loginModel.setNombre(response.body().getNombre());
                             loginModel.code=String.valueOf(response.code());
                         }

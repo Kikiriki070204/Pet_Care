@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Pet_Care"
         tools:targetApi="31" >
         <activity
+            android:name=".models.Sensor_Item"
+            android:exported="false" />
+        <activity
             android:name=".views.Perfil_user"
             android:exported="false" />
         <activity

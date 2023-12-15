@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -17,8 +18,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.pet_care.R;
+import com.example.pet_care.adapters.MyPetsAdapter;
 import com.example.pet_care.models.HomeModel;
+import com.example.pet_care.models.Pet;
 import com.example.pet_care.view_models.home_viewmodel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Home extends AppCompatActivity {
 TextView nombre_user,hey;
@@ -38,7 +44,7 @@ RecyclerView recycler;
         Intent a=getIntent();
         String nombre_us=a.getStringExtra("nombre");
         int userId=a.getIntExtra("id",-1);
-        String id=String.valueOf(userId);
+        String id_usuario=String.valueOf(userId);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +56,11 @@ RecyclerView recycler;
             }
         });
 
+        List<Pet> petList=new ArrayList<>();
+
         ViewModelProvider viewModel=new ViewModelProvider(this);
         home_viewmodel homeViewModel=viewModel.get(home_viewmodel.class);
-        homeViewModel.getHome(id).observe(this, new Observer<HomeModel>() {
+        homeViewModel.getHome(id_usuario).observe(this, new Observer<HomeModel>() {
             @Override
             public void onChanged(HomeModel homeModel) {
                 if(homeModel != null && homeModel.code !=null)
@@ -66,8 +74,11 @@ RecyclerView recycler;
                             break;
                         case "200":
                             nombre_user.setText(nombre_us);
-                            if(homeModel.pets==null) {
-                                hey.setText("¡!");
+                            if(homeModel.pets!=null) {
+
+                                recycler.setAdapter(new MyPetsAdapter(homeModel.pets));
+                                recycler.setLayoutManager(new LinearLayoutManager(Home.this));
+                                recycler.setHasFixedSize(true);
                             }
                             break;
                     }

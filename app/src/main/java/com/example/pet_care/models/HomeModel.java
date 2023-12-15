@@ -1,17 +1,10 @@
 package com.example.pet_care.models;
 
+import java.util.List;
+
 public class HomeModel {
-    public String nombre;
     public String code;
-    public String pets;
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public List<Pet> pets;
 
     public String getCode() {
         return code;
@@ -21,11 +14,11 @@ public class HomeModel {
         this.code = code;
     }
 
-    public String getPets() {
+    public List<Pet> getPets() {
         return pets;
     }
 
-    public void setPets(String pets) {
+    public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
 }
