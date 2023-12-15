@@ -9,6 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -16,9 +17,7 @@
             android:background="@color/light_green"
             app:title="@string/name_app"
             app:titleTextAppearance="@style/TitleText"
-            app:titleTextColor="@color/dark_brown"
-            >
-        </androidx.appcompat.widget.Toolbar>
+            app:titleTextColor="@color/dark_brown"></androidx.appcompat.widget.Toolbar>
         <View
             android:id="@+id/top"
             android:layout_width="wrap_content"

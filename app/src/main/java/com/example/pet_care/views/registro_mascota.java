@@ -1,11 +1,15 @@
 package com.example.pet_care.views;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,12 +22,15 @@ import com.example.pet_care.view_models.pet_viewmodel;
 public class registro_mascota extends AppCompatActivity {
 
     TextView pet_name, peso, pet_collar;
+
     Button start_up;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_mascota);
-
+        Toolbar toolbar;
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         Intent a=getIntent();
         int id= a.getIntExtra("id_user",-1);
         String id_user=String.valueOf(id);
@@ -57,5 +64,28 @@ public class registro_mascota extends AppCompatActivity {
                 });
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id= item.getItemId();
+        if(id==R.id.item1)
+        {
+            startActivity(new Intent(registro_mascota.this,Perfil_user.class));
+        }
+        else if(id==R.id.log_out)
+        {
+            startActivity(new Intent(registro_mascota.this, Reg.class));
+        }
+        else if (id==R.id.home)
+        {
+            startActivity(new Intent(registro_mascota.this, Home.class));
+        }
+        return true;
     }
 }

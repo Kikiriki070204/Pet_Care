@@ -30,6 +30,7 @@ public class Home extends AppCompatActivity {
 TextView nombre_user,hey;
 ImageView add;
 RecyclerView recycler;
+public int userId;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,11 +102,15 @@ RecyclerView recycler;
         int id= item.getItemId();
         if(id==R.id.item1)
         {
-            startActivity(new Intent(Home.this, MainActivity.class));
+            startActivity(new Intent(Home.this,Perfil_user.class));
         }
         else if(id==R.id.log_out)
         {
             startActivity(new Intent(Home.this, Reg.class));
+        }
+        else if (id==R.id.home)
+        {
+            startActivity(new Intent(Home.this, Home.class));
         }
         return true;
     }

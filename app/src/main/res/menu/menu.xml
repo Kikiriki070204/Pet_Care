@@ -8,4 +8,9 @@
     <item
         android:id="@+id/log_out"
         android:title="Cerrar sesión"></item>
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_foreground"
+        app:showAsAction="ifRoom"></item>
 </menu>
