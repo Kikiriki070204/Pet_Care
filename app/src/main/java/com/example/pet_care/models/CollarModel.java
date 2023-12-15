@@ -7,8 +7,6 @@ import java.util.List;
 public class CollarModel {
 
     public String code;
-
-    @SerializedName("sensor_data")
     public List<DataModel> sensor_data;
 
     public List<DataModel> getSensor_data() {

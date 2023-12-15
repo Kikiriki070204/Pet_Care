@@ -61,10 +61,10 @@
 
         <ImageView
             android:id="@+id/icon1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_below="@id/greetings"
-            android:layout_marginLeft="55dp"
+            android:layout_marginLeft="60dp"
             android:src="@drawable/health">
         </ImageView>
         <TextView
@@ -80,8 +80,8 @@
 
         <ImageView
             android:id="@+id/icon2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_below="@id/greetings"
             android:layout_marginLeft="50dp"
             android:layout_toRightOf="@id/icon1"
@@ -95,17 +95,17 @@
             android:text="@string/icon2"
             android:fontFamily="@font/baloo"
             android:textColor="@color/dark_brown"
-            android:layout_marginLeft="49dp">
+            android:layout_marginLeft="45dp">
         </TextView>
+
         <ImageView
             android:id="@+id/icon3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_below="@id/greetings"
             android:layout_marginLeft="50dp"
             android:layout_toRightOf="@id/icon2"
-            android:src="@drawable/security">
-        </ImageView>
+            android:src="@drawable/security"></ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
             android:text="@string/icon3"
             android:fontFamily="@font/baloo"
             android:textColor="@color/dark_brown"
-            android:layout_marginLeft="48dp">
+            android:layout_marginLeft="42dp">
         </TextView>
 
         <View
@@ -149,7 +149,7 @@
                         android:layout_width="40dp"
                         android:layout_height="35dp"
                         android:src="@drawable/add"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="12dp"
                         android:layout_toRightOf="@id/textView4"
                         android:layout_marginLeft="170dp"></ImageView>
                 </RelativeLayout>
