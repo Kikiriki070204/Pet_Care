@@ -28,7 +28,6 @@ public class map_viewmodel extends ViewModel {
     }
 
     private void fetchLatitudeAndLongitude() {
-        // Llamada para obtener la latitud
         Call<Double> latitudeCall = apiService.getLatitude();
         latitudeCall.enqueue(new Callback<Double>() {
             @Override
@@ -40,11 +39,9 @@ public class map_viewmodel extends ViewModel {
 
             @Override
             public void onFailure(Call<Double> call, Throwable t) {
-                // Manejar errores aquí
             }
         });
 
-        // Llamada para obtener la longitud
         Call<Double> longitudeCall = apiService.getLongitude();
         longitudeCall.enqueue(new Callback<Double>() {
             @Override
@@ -56,7 +53,7 @@ public class map_viewmodel extends ViewModel {
 
             @Override
             public void onFailure(Call<Double> call, Throwable t) {
-                // Manejar errores aquí
+
             }
         });
     }
