@@ -1,3 +1,44 @@
 <resources>
-    <string name="app_name">Pet_Care</string>
+    <string name="app_name">Pet Care</string>
+    <string name="name_app">Pet Care</string>
+    <string name="txt1">Iniciar sesión</string>
+    <string name="txt2">Registrarse</string>
+    <string name="wcm">¡Bienvenido(a)!</string>
+    <string name="hello">¡Hola!</string>
+    <string name="email">Correo electrónico</string>
+    <string name="pass">Contraseña</string>
+    <string name="pass_conf">Confirmar contraseña</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="Bienvenida_Start_1"><b>¡Bienvenido/a!</b> Felicidades por haber comprado uno de nuestros collares para mascotas</string>
+    <string name="nolog2_1">¿Como funciona?\nNecesitarás un collar</string>
+    <string name="nolog2_2">Solo necesitas adquirir uno de nuestros collares y registrarte </string>
+    <string name="nolog3">Ten la tranquilidad de saber que tu mascota está a salvo</string>
+    <string name="title_activity_home">Home</string>
+    <string name="Info">¡Háblanos un poco sobre tu mascota!</string>
+    <string name="Peso">Peso</string>
+    <string name="ID">*Collar</string>
+    <string name="ready">¡Empezar!</string>
+    <string name="item1">Mi cuenta</string>
+    <string name="icon1">Salud</string>
+    <string name="icon2">Bienestar</string>
+    <string name="icon3">Seguridad</string>
+    <!-- strings que mantienen name -->
+    <string name="user">Hi</string>
+    <string name="greet">¿Qué información sobre tu mascota te proporcionamos con nuestra aplicación?</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="Safe">Guardar</string>
+    <string name="weight">Peso</string>
+    <string name="your_data">Tus datos</string>
+    <string name="collar_data">Estatus</string>
+    <string name="edit">Editar</string>
+    <string name="ingresa_password">Ingresa contraseña para editar</string>
+    <string name="passConf">Confirmar Contraseña</string>
+    <string name="change_pass">Cambiar Contraseña</string>
+
+
 </resources>
