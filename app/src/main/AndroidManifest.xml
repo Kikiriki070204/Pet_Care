@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyAYM9BS5nYSbLSiRD6zmxHL592Ia7jPLbM" />
 
     <application
         android:allowBackup="true"
@@ -48,6 +51,8 @@
         <activity
             android:name=".views.No_Log"
             android:exported="false" />
+        <activity android:name=".views.MapActivity"
+            android:exported="false"/>
         <activity
             android:name=".views.MainActivity"
             android:exported="true">
