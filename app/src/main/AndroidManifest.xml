@@ -21,15 +21,11 @@
         <activity
             android:name=".views.Profile_Dog"
             android:exported="false" />
-        <activity
-            android:name=".models.Sensor_Item"
-            android:exported="false" />
+
         <activity
             android:name=".views.Perfil_user"
             android:exported="false" />
-        <activity
-            android:name=".views.Settings_dog"
-            android:exported="false" />
+
         <activity
             android:name=".views.Home"
             android:exported="false" />
