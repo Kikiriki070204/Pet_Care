@@ -32,7 +32,6 @@ public class CollarRepos {
             public void onResponse(Call<CollarModel> call, Response<CollarModel> response) {
                 CollarModel collarModel;
                 Log.d("COLLAR","heeeey");
-
                 switch (response.code())
                 {
                     case 401:
@@ -44,6 +43,7 @@ public class CollarRepos {
                         collarModel= response.body();
                         if(collarModel !=null)
                         {
+                            collarModel.sensor_data=response.body().getSensor_data();
                             collarModel.code=String.valueOf(response.code());
                         }
                         mutable.setValue(collarModel);

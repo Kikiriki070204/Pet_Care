@@ -2,7 +2,7 @@ package com.example.pet_care.models;
 
 public class DataModel {
     public String feed_key;
-    public String value;
+    public  String value;
 
     public String getFeed_key() {
         return feed_key;
