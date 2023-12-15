@@ -2,10 +2,9 @@ package com.example.pet_care.repository;
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.pet_care.models.SwitchModel;
+import com.example.pet_care.models.BuzzerModel;
 import com.example.pet_care.request.SwitchRequest;
 import com.example.pet_care.retrofit.request_1;
-import com.example.pet_care.views.Switch_buzzer;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -16,21 +15,21 @@ public class SwitchRepos {
     public Retrofit retrofit;
 
     void setRetrofit(){retrofit= request_1.getRetrofit();}
-    public MutableLiveData<SwitchModel> Switchchange(String Switch)
+    public MutableLiveData<BuzzerModel> Switchchange(String Switch)
     {
         setRetrofit();
         SwitchRequest switch_buzzer=retrofit.create(SwitchRequest.class);
-        Call<SwitchModel> SwitchModelCall= switch_buzzer.Switchchange(Switch);
-        MutableLiveData<SwitchModel> mutable=new MutableLiveData<>();
-        SwitchModelCall.enqueue(new Callback<SwitchModel>() {
+        Call<BuzzerModel> SwitchModelCall= switch_buzzer.Switchchange(Switch);
+        MutableLiveData<BuzzerModel> mutable=new MutableLiveData<>();
+        SwitchModelCall.enqueue(new Callback<BuzzerModel>() {
             @Override
-            public void onResponse(Call<SwitchModel> call, Response<SwitchModel> response) {
-                SwitchModel switchModel;
+            public void onResponse(Call<BuzzerModel> call, Response<BuzzerModel> response) {
+                BuzzerModel switchModel;
                 switch(response.code()) {
                     case 422:
                     case 404:
                     case 400:
-                        switchModel= new SwitchModel();
+                        switchModel= new BuzzerModel();
                         switchModel.code=String.valueOf(response.code());
                         mutable.setValue(switchModel);
                         break;
@@ -39,7 +38,7 @@ public class SwitchRepos {
 
                         if(switchModel != null)
                         {
-                            switchModel.setSwitch(response.body().getSwitch());
+                            switchModel.setValue(response.body().getValue());
                             switchModel.code=String.valueOf(response.code());
                         }
                         mutable.setValue(switchModel);
@@ -49,11 +48,11 @@ public class SwitchRepos {
             }
 
             @Override
-            public void onFailure(Call<SwitchModel> call, Throwable t) {
+            public void onFailure(Call<BuzzerModel> call, Throwable t) {
 
             }
-        });
 
+        });
         return mutable;
     }
 

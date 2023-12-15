@@ -1,5 +1,6 @@
 package com.example.pet_care.request;
 
+import com.example.pet_care.models.BuzzerModel;
 import com.example.pet_care.models.SwitchModel;
 
 import retrofit2.Call;
