@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.Reg">
+    tools:context=".views.Reg"
+    android:background="@color/white">
 <View
     android:id="@+id/v1"
     android:layout_width="0dp"
@@ -28,7 +29,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
         android:textColor="@color/dark_brown"
-        android:text="@string/name"
+        android:text="@string/name_app"
         android:textSize="50sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
