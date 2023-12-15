@@ -12,6 +12,6 @@ public interface PetRequest {
     @POST("pets/add")
     Call<PetModel> newPet(@Field("nombre") String nombre,
                           @Field("peso") String peso,
-                          @Field("owner") String id_collar,
-                          @Field("collar") String id_usuario);
+                          @Field("id_collar") String id_collar,
+                          @Field("id_usuario") String id_usuario);
 }

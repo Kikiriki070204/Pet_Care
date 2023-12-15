@@ -33,6 +33,7 @@ public class registro_mascota extends AppCompatActivity {
         setSupportActionBar(toolbar);
         Intent a=getIntent();
         int id= a.getIntExtra("id_user",-1);
+        String nom= a.getStringExtra("nombre");
         String id_user=String.valueOf(id);
 
         pet_name=findViewById(R.id.pet_name);
@@ -54,10 +55,14 @@ public class registro_mascota extends AppCompatActivity {
                                 Toast.makeText(registro_mascota.this, "¡Error! La clave del collar no existe o es errónea ", Toast.LENGTH_SHORT).show();
                                 break;
                             case "422":
-                                Toast.makeText(registro_mascota.this, "¡Error! Verifica tus datos", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registro_mascota.this, "¡Error! Verifica tud datos", Toast.LENGTH_SHORT).show();
                                 break;
                             case "201":
                                 Toast.makeText(registro_mascota.this, "¡Macota registrada con éxito! ", Toast.LENGTH_SHORT).show();
+                                Intent h=new Intent(registro_mascota.this,Home.class);
+                                h.putExtra("nombre",nom);
+                                h.putExtra("id",id);
+                                startActivity(h);
                                 break;
                         }
                     }
