@@ -30,8 +30,8 @@ public class Switch_buzzer extends AppCompatActivity {
         Toolbar toolbar;
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Intent a = getIntent();
-        userId = a.getIntExtra("id", -1);
+        Intent b = getIntent();
+        userId = b.getIntExtra("id", -1);
         String id = String.valueOf(userId);
         switch1 = findViewById(R.id.switch_buzzer);
 
@@ -51,9 +51,6 @@ public class Switch_buzzer extends AppCompatActivity {
                             case "200":
                                 Toast.makeText(Switch_buzzer.this, "yea! works", Toast.LENGTH_SHORT).show();
 
-                                Intent i = new Intent(getApplicationContext(), Home.class);
-                                i.putExtra("id", userId);
-                                startActivity(i);
                                 break;
                         }
                     }

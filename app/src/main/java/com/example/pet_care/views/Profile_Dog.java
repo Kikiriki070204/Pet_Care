@@ -29,6 +29,9 @@ public class Profile_Dog extends AppCompatActivity {
     TextView pet_nom;
     RecyclerView recycler;
 
+    public int userId;
+    public String nombre_us;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,8 @@ public class Profile_Dog extends AppCompatActivity {
 
         Intent b=getIntent();
         String pet_name=b.getStringExtra("pet_name");
+        userId=b.getIntExtra("id",-1);
+        nombre_us=b.getStringExtra("nombre");
 
         pet_nom.setText(pet_name);
 
@@ -89,7 +94,10 @@ public class Profile_Dog extends AppCompatActivity {
         }
         else if (id==R.id.home)
         {
-            startActivity(new Intent(Profile_Dog.this, Home.class));
+            Intent u=new Intent(Profile_Dog.this, Home.class);
+            u.putExtra("id",userId);
+            u.putExtra("nombre",nombre_us);
+            startActivity(u);
         }
         return true;
     }

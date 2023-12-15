@@ -10,7 +10,7 @@ import retrofit2.http.Path;
 
 public interface EditProfileRequest {
     @FormUrlEncoded
-    @POST("users/{id}/update-password")
+    @POST("auth/users/{id}/update-password")
     Call<EditProfileModel> EditProfile(@Field("password")String password,
                                        @Path("id") String id,
                                        @Field("password_confirmation") String passwordConf);

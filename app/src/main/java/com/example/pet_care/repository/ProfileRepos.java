@@ -40,11 +40,11 @@ public class ProfileRepos {
                         profileModel=response.body();
                         if(profileModel != null)
                         {
-                            profileModel.setName(response.body().getName());
-                            profileModel.setSurname(response.body().getSurname());
+                            profileModel.setNombre(response.body().getNombre());
+                            profileModel.setApellidos(response.body().getApellidos());
                             profileModel.setEmail(response.body().getEmail());
                             profileModel.setPassword(response.body().getPassword());
-                            profileModel.setPasswordConf(response.body().getPasswordConf());
+                            profileModel.setPassword_confirmation(response.body().getPassword_confirmation());
                             profileModel.code=String.valueOf(response.code());
                         }
                         mutable.setValue(profileModel);

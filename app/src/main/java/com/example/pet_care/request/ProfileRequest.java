@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 import com.example.pet_care.models.ProfileModel;
 public interface ProfileRequest {
-    @GET("profile/{id}")
+    @GET("auth/profile/{id}")
     Call<ProfileModel> getProfile(@Path("id") String id);
 }
