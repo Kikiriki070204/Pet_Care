@@ -64,6 +64,7 @@ RecyclerView recycler;
             public void onClick(View v) {
                 Intent o=new Intent(Home.this,registro_mascota.class);
                 o.putExtra("id_user",userId);
+                o.putExtra("nombre",nombre_us);
 
                 startActivity(o);
             }
