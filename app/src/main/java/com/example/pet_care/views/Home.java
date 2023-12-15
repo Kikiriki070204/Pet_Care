@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,6 +31,7 @@ import java.util.List;
 public class Home extends AppCompatActivity implements PetListener {
 TextView nombre_user,hey;
 ImageView add;
+ImageButton Seguridad;
 RecyclerView recycler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +44,20 @@ RecyclerView recycler;
         hey=findViewById(R.id.hey);
         recycler=findViewById(R.id.recyclerView);
         add=findViewById(R.id.add_btn);
+        Seguridad=findViewById(R.id.icon3);
         Intent a=getIntent();
         String nombre_us=a.getStringExtra("nombre");
         int userId=a.getIntExtra("id",-1);
         String id_usuario=String.valueOf(userId);
+
+        Seguridad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(Home.this,Switch_buzzer.class);
+                i.putExtra("id_user",userId);
+                startActivity(i);
+            }
+        });
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
